@@ -8,7 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-medium-tu';
 
-  public add(firstNumber: number, secondNumber: number) {
-    return firstNumber + secondNumber;
+  public transformStringArrayToNumber(array: string[]): number[] {
+    let arrayOfNumber: number[] = [];
+
+    array.forEach((number: string) => {
+      arrayOfNumber.push(+number);
+    });
+
+    return arrayOfNumber;
   }
 }

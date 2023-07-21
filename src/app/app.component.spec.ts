@@ -17,19 +17,12 @@ describe('AppComponent', () => {
     component = spectator.component;
   });
 
-  it('should sum two numbers', () => {
-    const result: number = component.add(5, 5);
+  it('should sum all numbers in a array', () => {
+    const array: string[] = ['1', '2'];
+    const expected: number[] = [1, 2];
 
-    expect(result).toBe(10);
+    const result: number[] = component.transformStringArrayToNumber(array);
+
+    expect(result).toEqual(expected);
   });
-
-  it('should sum two numbers', () => {
-    const firstNumber: number = 5
-    const secondNumber: number = 5
-    const resultAdd = firstNumber + secondNumber
-
-    const result: number = component.add(firstNumber,secondNumber)
-
-    expect(result).toBe(resultAdd);
-  })
 });
